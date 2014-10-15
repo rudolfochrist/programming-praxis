@@ -3,7 +3,9 @@
 
 (in-package :cl-user)
 (defpackage :spiral-wrapping
-  (:use :cl :cl-commons))
+  (:use :cl :cl-commons)
+  (:export :matrix
+           :run))
 
 (in-package :spiral-wrapping)
 
@@ -47,3 +49,6 @@
                                   (cdr sublist))
                               matrix)))
       (read-right (car (last new-matrix)) (butlast new-matrix)))))
+
+(defun run (matrix)
+  (read-left (car matrix) (cdr matrix)))
