@@ -1,3 +1,4 @@
+;;; see http://programmingpraxis.com/2014/11/18/damms-algorithm/
 (in-package :cl-user)
 (defpackage :damm
   (:use :cl))
