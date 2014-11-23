@@ -1,7 +1,8 @@
 
 ;;; see http://programmingpraxis.com/2014/11/14/dawkins-weasel/
 (defpackage :dawkins-weasel
-  (:use :cl))
+  (:use :cl)
+  (:export :run))
 
 (in-package :dawkins-weasel)
 
