@@ -1,4 +1,4 @@
-
+;;; see http://programmingpraxis.com/2014/11/25/thou-impertinent-urchin-faced-miscreant/
 (in-package :cl-user)
 (defpackage :buzz-words
   (:use :cl)
