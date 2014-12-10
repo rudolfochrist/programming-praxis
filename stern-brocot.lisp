@@ -3,7 +3,8 @@
 (in-package :cl-user)
 (defpackage :stern-brocot
   (:nicknames :stb)
-  (:use :cl))
+  (:use :cl)
+  (:export :collect))
 
 (in-package :stern-brocot)
 
