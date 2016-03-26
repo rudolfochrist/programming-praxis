@@ -36,3 +36,21 @@
   (let ((sum-1 (apply #'+ numbers))
         (sum-2 (loop for i from lower-bound to upper-bound sum i)))
     (- sum-2 sum-1)))
+
+;;; 1.3 Removing duplicates of an array and returning an array of only unique elements
+
+(defvar *list* (list 1  2  3  5  1  5  9  1  2  8))
+
+;;; (uniques-1 *list*)  ;=> (1 2 3 5 9 8)
+;;; (uniques-2 *list*)  ;=> (1 2 3 5 9 8)
+
+;;; cheapskate common lisp
+(defun uniques-1 (list)
+  (remove-duplicates list))
+
+;;; self
+(defun uniques-2 (list)
+  (loop with set = (make-hash-table :size (length list))
+     for number in list
+     unless (gethash number set)
+     collect (setf (gethash number set) number)))
